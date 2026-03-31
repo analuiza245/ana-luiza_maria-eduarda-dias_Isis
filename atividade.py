@@ -36,3 +36,12 @@ valores = (user_id,)
 cursor.execute(sql, valores)
 banco.commit()
 
+email = input("Digite seu email")
+senha = input("Digite sua senha")
+cursor.execute(f"SELECT senha FROM USUARIO WHERE email = '{email}'")
+dado = cursor.fetchone()
+if dado:
+    if senha == dado[0]
+        print("acesso concedido")
+    else:
+        print("acesso negado")
